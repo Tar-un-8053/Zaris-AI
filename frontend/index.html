@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>ZARIS AI - Cyber Desk Assistant</title>
+
+  <link rel="icon" type="image/png" href="./img/tr.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css?v=mobile2" />
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-scanline"></div>
+<div class="bg-aurora aurora-left"></div>
+<div class="bg-aurora aurora-right"></div>
+<div class="bg-vignette"></div>
+
+<div class="hud-corner hud-tl"></div>
+<div class="hud-corner hud-tr"></div>
+<div class="hud-corner hud-bl"></div>
+<div class="hud-corner hud-br"></div>
+
+<div class="zaris-app">
+  <div class="status-bar">
+    <div class="status-left">
+      <span class="status-dot online"></span>
+      <span class="status-label">SYSTEM <b>ONLINE</b></span>
+    </div>
+    <div class="status-center">
+      <span class="zaris-title">Z A R I S &nbsp; A I</span>
+    </div>
+    <div class="status-right">
+      <span id="statusText" class="mode-label">MIC ARMED</span>
+      <span class="status-dot standby" id="statusDot"></span>
+    </div>
+  </div>
+
+  <div class="robot-core-wrapper">
+    <div class="robot-core" id="robotCore">
+      <div class="core-orbit orbit-alpha" aria-hidden="true">
+        <span class="orbit-node orbit-node-primary"></span>
+        <span class="orbit-node orbit-node-secondary"></span>
+      </div>
+      <div class="core-orbit orbit-beta" aria-hidden="true">
+        <span class="orbit-node orbit-node-primary"></span>
+        <span class="orbit-node orbit-node-secondary"></span>
+      </div>
+      <div class="core-orbit orbit-gamma" aria-hidden="true">
+        <span class="orbit-node orbit-node-primary"></span>
+      </div>
+
+      <div class="telemetry-cluster telemetry-left" aria-hidden="true">
+        <span class="telemetry-label" id="telemetryPrimary">THREAT 00</span>
+        <span class="telemetry-label" id="telemetrySecondary">AUDIO READY</span>
+      </div>
+
+      <div class="telemetry-cluster telemetry-right" aria-hidden="true">
+        <span class="telemetry-label" id="telemetryTertiary">VISION READY</span>
+        <span class="telemetry-label" id="telemetryQuaternary">LOCK STANDBY</span>
+      </div>
+
+      <canvas id="canvasOne" width="300" height="300"></canvas>
+
+      <div class="hex-ring"></div>
+      <div class="arc-ring arc-1"></div>
+      <div class="arc-ring arc-2"></div>
+      <div class="arc-ring arc-3"></div>
+
+      <div class="img-core holo-core" id="imgCore">
+        <div class="avatar-holo core-holo" id="avatarHolo">
+          <div class="avatar-aura"></div>
+
+          <div class="ai-core-shell" aria-hidden="true">
+            <div class="ai-core-backdrop"></div>
+            <div class="ai-core-grid"></div>
+
+            <div class="ai-core-rings">
+              <span class="reactor-ring rr1"></span>
+              <span class="reactor-ring rr2"></span>
+              <span class="reactor-ring rr3"></span>
+              <span class="reactor-ring rr4"></span>
+            </div>
+
+            <div class="ai-core-reactor">
+              <div class="reactor-halo"></div>
+              <div class="reactor-halo reactor-halo-inner"></div>
+              <div class="reactor-orb">
+                <span class="orb-layer orb-layer-1"></span>
+                <span class="orb-layer orb-layer-2"></span>
+                <span class="orb-layer orb-layer-3"></span>
+                <span class="orb-core"></span>
+              </div>
+              <div class="energy-spokes">
+                <span class="spoke s1"></span>
+                <span class="spoke s2"></span>
+                <span class="spoke s3"></span>
+                <span class="spoke s4"></span>
+                <span class="spoke s5"></span>
+                <span class="spoke s6"></span>
+              </div>
+              <div class="signal-beam signal-beam-top"></div>
+              <div class="signal-beam signal-beam-bottom"></div>
+            </div>
+
+            <div class="reactor-pulse-array">
+              <span class="pulse-line pl1"></span>
+              <span class="pulse-line pl2"></span>
+              <span class="pulse-line pl3"></span>
+              <span class="pulse-line pl4"></span>
+              <span class="pulse-line pl5"></span>
+            </div>
+
+            <div class="reactor-data-columns">
+              <div class="data-column data-column-left">
+                <span class="data-bar db1"></span>
+                <span class="data-bar db2"></span>
+                <span class="data-bar db3"></span>
+                <span class="data-bar db4"></span>
+              </div>
+              <div class="data-column data-column-right">
+                <span class="data-bar db1"></span>
+                <span class="data-bar db2"></span>
+                <span class="data-bar db3"></span>
+                <span class="data-bar db4"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hud-panel hud-panel-left">
+            <span class="hud-line"></span>
+            <span class="hud-line"></span>
+            <span class="hud-line small"></span>
+            <span class="hud-chart"></span>
+          </div>
+
+          <div class="hud-panel hud-panel-right">
+            <span class="hud-line"></span>
+            <span class="hud-line small"></span>
+            <span class="hud-chart tall"></span>
+            <span class="hud-line"></span>
+          </div>
+
+          <div class="platform platform-back"></div>
+          <div class="platform platform-mid"></div>
+          <div class="platform platform-front"></div>
+        </div>
+
+        <div class="img-scan-line"></div>
+        <div class="img-ring-glow"></div>
+
+        <div class="speak-overlay">
+          <div class="voice-ripple vr1"></div>
+          <div class="voice-ripple vr2"></div>
+          <div class="voice-ripple vr3"></div>
+        </div>
+
+        <div class="voice-ring"></div>
+      </div>
+
+      <div class="sound-ring sr1"></div>
+      <div class="sound-ring sr2"></div>
+      <div class="sound-ring sr3"></div>
+      <div class="sound-ring sr4"></div>
+
+      <div class="wave-bars" id="waveBars">
+        <span class="bar b1"></span>
+        <span class="bar b2"></span>
+        <span class="bar b3"></span>
+        <span class="bar b4"></span>
+        <span class="bar b5"></span>
+        <span class="bar b6"></span>
+        <span class="bar b7"></span>
+        <span class="bar b8"></span>
+        <span class="bar b9"></span>
+        <span class="bar b10"></span>
+        <span class="bar b11"></span>
+        <span class="bar b12"></span>
+        <span class="bar b13"></span>
+        <span class="bar b14"></span>
+        <span class="bar b15"></span>
+        <span class="bar b16"></span>
+        <span class="bar b17"></span>
+        <span class="bar b18"></span>
+        <span class="bar b19"></span>
+        <span class="bar b20"></span>
+      </div>
+
+      <div class="pulse-ring p1"></div>
+      <div class="pulse-ring p2"></div>
+      <div class="pulse-ring p3"></div>
+    </div>
+  </div>
+
+  <div class="chat-display" id="consoleDisplay">
+    <div class="chat-line" id="consoleLine">
+      <span class="chat-prefix">&gt;&gt;</span>
+      <span class="chat-text" id="consoleText">Always-on guard active. Security command do...</span>
+    </div>
+  </div>
+
+  <section class="memory-twin-panel" id="memoryTwinPanel">
+    <div class="memory-head">
+      <div>
+        <p class="memory-title">Secure AI Memory Twin</p>
+        <p class="memory-sub">Zaris AI knowledge brain + trust ledger</p>
+      </div>
+      <div class="memory-head-actions">
+        <button id="memoryRefreshBtn" class="memory-btn ghost">Refresh</button>
+        <span id="memoryIntegrityBadge" class="integrity-badge">Integrity --</span>
+      </div>
+    </div>
+
+    <div class="memory-kpis">
+      <div class="memory-kpi">
+        <span class="kpi-label">Records</span>
+        <span class="kpi-value" id="kpiRecords">0</span>
+      </div>
+      <div class="memory-kpi">
+        <span class="kpi-label">Topics</span>
+        <span class="kpi-value" id="kpiTopics">0</span>
+      </div>
+      <div class="memory-kpi">
+        <span class="kpi-label">On Chain</span>
+        <span class="kpi-value" id="kpiOnChain">0</span>
+      </div>
+      <div class="memory-kpi">
+        <span class="kpi-label">Blocks</span>
+        <span class="kpi-value" id="kpiBlocks">0</span>
+      </div>
+    </div>
+
+    <div class="memory-grid">
+      <div class="memory-card">
+        <h4>Weak Topics</h4>
+        <div id="weakTopicsList" class="memory-list"></div>
+      </div>
+
+      <div class="memory-card">
+        <h4>Strong Topics</h4>
+        <div id="strongTopicsList" class="memory-list"></div>
+      </div>
+
+      <div class="memory-card">
+        <h4>Study History</h4>
+        <div id="studyHistoryList" class="memory-list"></div>
+      </div>
+
+      <div class="memory-card">
+        <h4>Revision Plan</h4>
+        <div id="revisionPlanList" class="memory-list"></div>
+      </div>
+
+      <div class="memory-card full">
+        <h4>Alerts & Security Notifications</h4>
+        <div id="securityAlertsList" class="memory-list"></div>
+      </div>
+    </div>
+
+    <div class="memory-composer">
+      <div class="composer-row">
+        <input id="memoryTopicInput" type="text" placeholder="Topic (example: Operating System)" />
+      </div>
+      <div class="composer-row">
+        <textarea id="memoryNoteInput" rows="2" placeholder="What did you study today?"></textarea>
+      </div>
+      <div class="composer-row split">
+        <label>
+          Confidence
+          <input id="memoryConfidenceInput" type="range" min="1" max="5" value="3" />
+        </label>
+        <label>
+          Duration (min)
+          <input id="memoryDurationInput" type="number" min="5" max="240" value="25" />
+        </label>
+      </div>
+      <div class="composer-row actions">
+        <button id="memorySaveBtn" class="memory-btn">Save Note</button>
+        <input
+          id="memoryFileInput"
+          type="file"
+          accept=".txt,.md,.json,.csv,.pdf,.png,.jpg,.jpeg,.webp"
+          title="Upload study document or image"
+          aria-label="Upload study document or image"
+        />
+        <button id="memoryUploadBtn" class="memory-btn ghost">Upload Doc/Image</button>
+        <button id="memoryVerifyBtn" class="memory-btn danger">Verify Ledger</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="SiriWave">
+    <div id="siri-container"></div>
+  </div>
+
+  <div class="input-bar">
+    <div class="input-wrap">
+      <button id="FaceBtn" class="hud-btn face-btn" title="Owner Identity">
+        <i class="bi bi-person-bounding-box"></i>
+      </button>
+
+      <button id="ConsoleBtn" class="hud-btn" title="Security Console">
+        <i class="bi bi-terminal-fill"></i>
+      </button>
+
+      <div class="input-field-wrap">
+        <span class="input-caret">&gt;_</span>
+        <input
+          type="text"
+          id="commandInput"
+          class="input-field"
+          placeholder="Security console command type karein..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <button id="TerminateBtn" class="hud-btn terminate-btn" title="Cancel Current Command">
+        <i class="bi bi-x-octagon"></i>
+      </button>
+
+      <button id="FolderBtn" class="hud-btn folder-btn" title="Manage Scan Folders">
+        <i class="bi bi-folder-plus"></i>
+      </button>
+
+      <button id="MicBtn" class="hud-btn mic-btn" title="Voice Command">
+        <i class="bi bi-mic-fill"></i>
+        <span class="mic-ripple"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="faceModal" class="face-modal hidden">
+    <div class="face-modal-content">
+      <h3><i class="bi bi-person-bounding-box"></i> Owner Identity</h3>
+      <div class="face-modal-actions">
+        <button id="faceRegisterBtn" class="face-action-btn">
+          <i class="bi bi-person-plus"></i> Enroll Owner
+        </button>
+        <button id="faceRecognizeBtn" class="face-action-btn">
+          <i class="bi bi-search"></i> Verify Owner
+        </button>
+      </div>
+      <div id="faceNameInput" class="face-name-wrap hidden">
+        <input type="text" id="faceName" placeholder="Owner name likho..." />
+        <button id="faceStartBtn" class="face-action-btn small">Start</button>
+      </div>
+      <button id="faceCloseBtn" class="face-close-btn">&times;</button>
+    </div>
+  </div>
+
+  <div id="threatAlertModal" class="threat-modal hidden">
+    <div class="threat-modal-content">
+      <div class="threat-modal-header">
+        <i class="bi bi-shield-exclamation"></i>
+        <h3>THREAT DETECTED</h3>
+      </div>
+      <div class="threat-modal-body">
+        <div class="threat-info">
+          <div class="threat-row">
+            <span class="threat-label">File:</span>
+            <span id="threatFileName" class="threat-value"></span>
+          </div>
+          <div class="threat-row">
+            <span class="threat-label">Threat:</span>
+            <span id="threatType" class="threat-value danger"></span>
+          </div>
+          <div class="threat-row">
+            <span class="threat-label">Risk:</span>
+            <span id="threatScore" class="threat-value"></span>
+          </div>
+          <div id="threatWarnings" class="threat-warnings"></div>
+        </div>
+        <div class="threat-path hidden" id="threatPathRow">
+          <span class="threat-label">Path:</span>
+          <span id="threatPath" class="threat-value path"></span>
+        </div>
+      </div>
+      <div class="threat-modal-actions">
+        <button id="threatBlockBtn" class="threat-btn block">
+          <i class="bi bi-shield-lock"></i> Block File
+        </button>
+        <button id="threatDeleteBtn" class="threat-btn delete">
+          <i class="bi bi-trash"></i> Delete File
+        </button>
+        <button id="threatIgnoreBtn" class="threat-btn ignore">
+          <i class="bi bi-x-circle"></i> Ignore
+        </button>
+      </div>
+      <button id="threatCloseBtn" class="threat-close-btn">&times;</button>
+    </div>
+  </div>
+
+  <div id="folderModal" class="face-modal hidden">
+    <div class="face-modal-content folder-modal">
+      <h3><i class="bi bi-folder-plus"></i> Manage Scan Folders</h3>
+      <p class="folder-info">Download scanner in ye folders monitor karega:</p>
+      <div id="folderList" class="folder-list"></div>
+      <div class="folder-add-row">
+        <input type="text" id="folderInput" placeholder="Folder path likho ya select karo..." />
+        <button id="folderBrowseBtn" class="face-action-btn small">
+          <i class="bi bi-folder2-open"></i> Browse
+        </button>
+      </div>
+      <div class="folder-modal-actions">
+        <button id="folderAddBtn" class="face-action-btn">
+          <i class="bi bi-plus-circle"></i> Add Folder
+        </button>
+        <button id="folderCloseBtn" class="face-action-btn ghost">Done</button>
+      </div>
+      <button id="folderModalCloseBtn" class="face-close-btn">&times;</button>
+    </div>
+  </div>
+
+  <div class="bottom-stats">
+    <div class="stat-item">
+      <span class="stat-label">MODE</span>
+      <span class="stat-value">CYBER GUARD</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">AUTH</span>
+      <span class="stat-value">VOICE + FACE</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">IDS</span>
+      <span class="stat-value">LIVE</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">LATENCY</span>
+      <span class="stat-value" id="latencyVal">--ms</span>
+    </div>
+  </div>
+
+  <section class="system-monitor-panel hidden" id="systemMonitorPanel">
+    <div class="monitor-head">
+      <div>
+        <p class="monitor-title">System Monitor</p>
+        <p class="monitor-sub">Real-time system stats</p>
+      </div>
+      <div class="monitor-head-actions">
+        <button id="monitorRefreshBtn" class="monitor-btn ghost">Refresh</button>
+        <button id="monitorCloseBtn" class="monitor-btn ghost">&times;</button>
+      </div>
+    </div>
+
+    <div class="monitor-kpis">
+      <div class="monitor-kpi cpu-kpi">
+        <span class="kpi-label">CPU</span>
+        <div class="kpi-bar-container">
+          <div class="kpi-bar" id="cpuBar" style="width:0%"></div>
+        </div>
+        <span class="kpi-value" id="cpuValue">0%</span>
+      </div>
+      <div class="monitor-kpi ram-kpi">
+        <span class="kpi-label">RAM</span>
+        <div class="kpi-bar-container">
+          <div class="kpi-bar" id="ramBar" style="width:0%"></div>
+        </div>
+        <span class="kpi-value" id="ramValue">0%</span>
+      </div>
+      <div class="monitor-kpi disk-kpi">
+        <span class="kpi-label">DISK</span>
+        <div class="kpi-bar-container">
+          <div class="kpi-bar" id="diskBar" style="width:0%"></div>
+        </div>
+        <span class="kpi-value" id="diskValue">0%</span>
+      </div>
+      <div class="monitor-kpi health-kpi">
+        <span class="kpi-label">HEALTH</span>
+        <span class="kpi-value health-score" id="healthScore">--</span>
+      </div>
+    </div>
+
+    <div class="monitor-grid">
+      <div class="monitor-card">
+        <h4>Drives</h4>
+        <div id="drivesList" class="monitor-list"></div>
+      </div>
+
+      <div class="monitor-card">
+        <h4>Top Processes</h4>
+        <div id="processesList" class="monitor-list"></div>
+      </div>
+
+      <div class="monitor-card">
+        <h4>RAM Details</h4>
+        <div id="ramDetails" class="monitor-details">
+          <div class="detail-row"><span>Used:</span><span id="ramUsed">-- GB</span></div>
+          <div class="detail-row"><span>Total:</span><span id="ramTotal">-- GB</span></div>
+          <div class="detail-row"><span>Available:</span><span id="ramAvailable">-- GB</span></div>
+        </div>
+      </div>
+
+      <div class="monitor-card">
+        <h4>Warnings</h4>
+        <div id="warningsList" class="monitor-list warnings"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="creator-credit">Created by <span>Tarun Yadav</span></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/eel.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.eel) {
+      window.eel.ui_init()();
+      console.log("ui_init() sent to backend");
+    } else {
+      console.error("EEL not loaded");
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("commandInput");
+    input.addEventListener("keypress", (e) => {
+      if (e.key === "Enter" && input.value.trim() !== "") {
+        const userText = input.value.trim();
+        if (typeof window.pushUserMessage === "function") {
+          window.pushUserMessage(userText);
+        }
+
+        if (!window.eel) {
+          console.error("EEL not loaded");
+          if (typeof window.showConsoleFeed === "function") {
+            window.showConsoleFeed("Backend connect nahi hai");
+          }
+          return;
+        }
+
+        window.eel.submitSecurityCommand(userText)();
+        input.value = "";
+      }
+    });
+  });
+</script>
+
+<script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+<script src="./phone_mic.js?v=1"></script>
+<script src="./script.js?v=singlevoice2"></script>
+<script src="./main.js?v=singlevoice2"></script>
+<script src="./controller.js?v=phone6"></script>
+
+</body>
+</html>

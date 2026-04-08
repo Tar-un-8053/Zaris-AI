@@ -1,0 +1,112 @@
+{
+  "enabled": true,
+  "auto_arm_on_startup": true,
+  "owner_name": "Tarun",
+  "owner_face_name": "Tarun",
+  "require_phrase": false,
+  "require_voiceprint": false,
+  "require_face": true,
+  "require_pin": false,
+  "voice_match_threshold": 0.63,
+  "failed_attempt_threshold": 3,
+  "threat_score": 0,
+  "threat_score_lock_threshold": 70,
+  "threat_score_max": 100,
+  "phrase": {
+    "salt": "",
+    "hash": ""
+  },
+  "pin": {
+    "salt": "",
+    "hash": ""
+  },
+  "voiceprint": {},
+  "continuous_auth": {
+    "enabled": false,
+    "interval_sec": 90,
+    "miss_threshold": 2
+  },
+  "anti_spoof": {
+    "voice_challenge": true
+  },
+  "ids": {
+    "enabled": true,
+    "monitor_usb": true,
+    "monitor_processes": true,
+    "monitor_downloads": true,
+    "monitor_interval_sec": 12,
+    "downloads_monitor_interval_sec": 6,
+    "risky_extensions": [
+      ".exe",
+      ".bat",
+      ".msi"
+    ],
+    "allowed_login_start_hour": 6,
+    "allowed_login_end_hour": 23,
+    "alert_on_unusual_hour": true,
+    "suspicious_processes": [
+      "wireshark.exe",
+      "fiddler.exe",
+      "burpsuite.exe",
+      "processhacker.exe",
+      "procexp.exe",
+      "nmap.exe",
+      "mimikatz.exe",
+      "ettercap.exe",
+      "keylogger.exe",
+      "john.exe",
+      "hashcat.exe"
+    ],
+    "scoring": {
+      "failed_auth": 15,
+      "unknown_face": 30,
+      "voice_mismatch": 18,
+      "pin_mismatch": 12,
+      "unusual_login_hour": 12,
+      "usb_inserted": 20,
+      "suspicious_process": 25,
+      "risky_download": 18,
+      "continuous_auth_fail": 20,
+      "panic_mode": 45,
+      "manual_capture": 8
+    }
+  },
+  "decoy": {
+    "enabled": true,
+    "open_on_intrusion": false
+  },
+  "forensics": {
+    "capture_video": true,
+    "video_duration_sec": 4,
+    "video_fps": 4
+  },
+  "vault": {
+    "enabled": false,
+    "locked": true,
+    "salt": "",
+    "verifier_hash": "",
+    "last_backup": ""
+  },
+  "self_protection": {
+    "owner_auth_required_for_shutdown": true,
+    "allow_exit_without_owner": false
+  },
+  "alerts": {
+    "popup": true,
+    "sound": true,
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "ty9253046709@gmail.com",
+      "password": "",
+      "from_email": "ty9253046709@gmail.com",
+      "to_email": "ty9253046709@gmail.com"
+    },
+    "telegram": {
+      "enabled": true,
+      "bot_token": "8298949221:AAEZ0OYIHe-yW1J64t3e9SU87VPhALDDjiY",
+      "chat_id": "5084300131"
+    }
+  }
+}

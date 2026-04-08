@@ -1,0 +1,408 @@
+[
+  {
+    "timestamp": "2026-04-07T21:43:56.079574",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 1000 files in 1.5s",
+    "metadata": {
+      "folder": "C:/Users/Downloads",
+      "total_files": 1000,
+      "duplicates": 5,
+      "suspicious": 3,
+      "unused": 10,
+      "scan_time": 1.5
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:43:56.080997",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: test.exe",
+    "metadata": {
+      "path": "C:/Users/Downloads/test.exe",
+      "risk_type": ".exe",
+      "size_mb": 5.2
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:43:56.082278",
+    "activity_type": "file_added",
+    "category": "files",
+    "message": "File added: new_file.pdf",
+    "metadata": {
+      "path": "C:/Users/Downloads/new_file.pdf",
+      "size_mb": 2.5,
+      "source": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.994019",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 7213 files in 2.3s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\downloads",
+      "total_files": 7213,
+      "duplicates": 10,
+      "suspicious": 20,
+      "unused": 20,
+      "scan_time": 2.27
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.995479",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2401 (1).msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2401 (1).msi",
+      "risk_type": ".msi",
+      "size_mb": 1.44
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.996486",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2401.msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2401.msi",
+      "risk_type": ".msi",
+      "size_mb": 1.44
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.997415",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2500-x64.exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2500-x64.exe",
+      "risk_type": ".exe",
+      "size_mb": 1.57
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.998167",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: Antigravity.exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\Antigravity.exe",
+      "risk_type": ".exe",
+      "size_mb": 164.78
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.998886",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: chromeremotedesktophost.msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\chromeremotedesktophost.msi",
+      "risk_type": ".msi",
+      "size_mb": 20.53
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:11.999590",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: VSCodeUserSetup-x64-1.92.0 (1).exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\VSCodeUserSetup-x64-1.92.0 (1).exe",
+      "count": 2,
+      "wasted_mb": 95.68
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:12.000711",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: Benchmark.cli",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\GTAIV-SteamRIP.com\\GTAIV\\pc\\data\\Benchmark.cli",
+      "count": 2,
+      "wasted_mb": 94.41
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:44:12.001711",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: JavaCodingPack-0.4.2 (1).exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\JavaCodingPack-0.4.2 (1).exe",
+      "count": 2,
+      "wasted_mb": 70.28
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:51:03.031605",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: test_delete_me.txt",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\test_delete_me.txt",
+      "size_mb": 3.147125244140625e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:51:03.096934",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: test_delete_me_2.txt",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\test_delete_me_2.txt",
+      "size_mb": 1.71661376953125e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T21:51:17.871651",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: test_jarvis_delete.txt",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\test_jarvis_delete.txt",
+      "size_mb": 2.86102294921875e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:03:44.784906",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: safe_file.pdf",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\safe_file.pdf",
+      "size_mb": 1.1444091796875e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:03:44.993141",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: malware_file.exe",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\malware_file.exe",
+      "size_mb": 1.1444091796875e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.605668",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 7215 files in 1.9s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\downloads",
+      "total_files": 7215,
+      "duplicates": 10,
+      "suspicious": 20,
+      "unused": 20,
+      "scan_time": 1.86
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.607851",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2401 (1).msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2401 (1).msi",
+      "risk_type": ".msi",
+      "size_mb": 1.44
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.608934",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2401.msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2401.msi",
+      "risk_type": ".msi",
+      "size_mb": 1.44
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.609748",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: 7z2500-x64.exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\7z2500-x64.exe",
+      "risk_type": ".exe",
+      "size_mb": 1.57
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.610905",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: Antigravity.exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\Antigravity.exe",
+      "risk_type": ".exe",
+      "size_mb": 164.78
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.612234",
+    "activity_type": "risky_file",
+    "category": "security",
+    "message": "Risky file found: chromeremotedesktophost.msi",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\chromeremotedesktophost.msi",
+      "risk_type": ".msi",
+      "size_mb": 20.53
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.613063",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: VSCodeUserSetup-x64-1.92.0 (1).exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\VSCodeUserSetup-x64-1.92.0 (1).exe",
+      "count": 2,
+      "wasted_mb": 95.68
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.613936",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: Benchmark.cli",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\GTAIV-SteamRIP.com\\GTAIV\\pc\\data\\Benchmark.cli",
+      "count": 2,
+      "wasted_mb": 94.41
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:13:50.615041",
+    "activity_type": "duplicate",
+    "category": "cleanup",
+    "message": "Duplicate found: JavaCodingPack-0.4.2 (1).exe",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\JavaCodingPack-0.4.2 (1).exe",
+      "count": 2,
+      "wasted_mb": 70.28
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:28:34.042969",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: test_delete_alert.txt",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\test_delete_alert.txt",
+      "size_mb": 3.528594970703125e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-07T22:31:16.911316",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: telegram_test_file.txt",
+    "metadata": {
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\telegram_test_file.txt",
+      "size_mb": 3.910064697265625e-05,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-08T11:34:39.299698",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 7213 files in 2.1s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\downloads",
+      "total_files": 7213,
+      "duplicates": 10,
+      "suspicious": 20,
+      "unused": 20,
+      "scan_time": 2.15
+    }
+  },
+  {
+    "timestamp": "2026-04-08T11:39:35.355357",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 8 files in 0.0s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\onedrive\\desktop\\pandas",
+      "total_files": 8,
+      "duplicates": 1,
+      "suspicious": 0,
+      "unused": 0,
+      "scan_time": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-04-08T11:43:17.880906",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 8 files in 0.0s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\onedrive\\desktop\\pandas",
+      "total_files": 8,
+      "duplicates": 1,
+      "suspicious": 0,
+      "unused": 0,
+      "scan_time": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-04-08T11:46:24.965355",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: sohail khan 2401201040.pdf",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\sohail khan 2401201040.pdf",
+      "size_mb": 3.271678924560547,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-08T11:57:55.422114",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: sohail khan 2401201080 s.pdf",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\sohail khan 2401201080 s.pdf",
+      "size_mb": 3.271068572998047,
+      "reason": "user"
+    }
+  },
+  {
+    "timestamp": "2026-04-08T12:04:20.674763",
+    "activity_type": "scan_completed",
+    "category": "scans",
+    "message": "Scanned 1305 files in 0.5s",
+    "metadata": {
+      "folder": "c:\\users\\tarun yadav\\downloads\\vansh",
+      "total_files": 1305,
+      "duplicates": 10,
+      "suspicious": 0,
+      "unused": 0,
+      "scan_time": 0.5
+    }
+  },
+  {
+    "timestamp": "2026-04-08T12:15:29.886396",
+    "activity_type": "file_deleted",
+    "category": "files",
+    "message": "File deleted: tarun 2401201077 s.pdf",
+    "metadata": {
+      "path": "c:\\users\\tarun yadav\\downloads\\tarun 2401201077 s.pdf",
+      "size_mb": 3.5271177291870117,
+      "reason": "user"
+    }
+  }
+]

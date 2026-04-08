@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2026-04-07T22:13:15.249334",
+    "severity": "critical",
+    "title": "RAT Detected",
+    "message": "remote_access.exe appears to be a RAT",
+    "category": "risky_file",
+    "action_suggested": "Delete file immediately",
+    "dismissed": false
+  },
+  {
+    "timestamp": "2026-04-07T22:13:15.251165",
+    "severity": "info",
+    "title": "Duplicate Files Found",
+    "message": "10 duplicate sets found, wasting 500.5MB",
+    "category": "duplicates",
+    "action_suggested": "Say 'show duplicates' to review",
+    "dismissed": false
+  },
+  {
+    "timestamp": "2026-04-07T22:13:15.251874",
+    "severity": "info",
+    "title": "Unused Files Detected",
+    "message": "20 files unused for 90+ days, using 2000.0MB",
+    "category": "unused_files",
+    "action_suggested": "Say 'show unused' to review",
+    "dismissed": false
+  }
+]

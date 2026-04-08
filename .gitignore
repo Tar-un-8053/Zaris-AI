@@ -1,0 +1,37 @@
+# Virtual environment
+envjarvis/
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Environment variables
+.env
+
+# Local certificates/keys
+*.pem
+
+# Local runtime outputs
+*.log
+ty1_*.mp3
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Face data (optional - remove if you want to track)
+faces_data/id_*/
+
+# Memory/chat files (optional)
+backend/chat_history.json
+backend/memory.json

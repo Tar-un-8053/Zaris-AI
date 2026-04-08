@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-04-07 22:56:04",
+  "downloads_dir": "C:\\Users\\Tarun yadav\\Downloads",
+  "lookback_hours": 240,
+  "scanned_files": 65,
+  "risky_files_count": 6,
+  "risky_files": [
+    {
+      "name": "WhatsApp Installer (1).exe",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\WhatsApp Installer (1).exe",
+      "risk_level": "high",
+      "risk_score": 75,
+      "reasons": [
+        "executable_or_script"
+      ]
+    },
+    {
+      "name": "vansh (2).zip",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\vansh (2).zip",
+      "risk_level": "medium",
+      "risk_score": 50,
+      "reasons": [
+        "archive_or_shortcut",
+        "large_payload"
+      ]
+    },
+    {
+      "name": "vansh.zip",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\vansh.zip",
+      "risk_level": "medium",
+      "risk_score": 50,
+      "reasons": [
+        "archive_or_shortcut",
+        "large_payload"
+      ]
+    },
+    {
+      "name": "Operating_system_Lab-assignment.zip",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\Operating_system_Lab-assignment.zip",
+      "risk_level": "medium",
+      "risk_score": 40,
+      "reasons": [
+        "archive_or_shortcut"
+      ]
+    },
+    {
+      "name": "super-store-sales-dataset-main.zip",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\super-store-sales-dataset-main.zip",
+      "risk_level": "medium",
+      "risk_score": 40,
+      "reasons": [
+        "archive_or_shortcut"
+      ]
+    },
+    {
+      "name": "OneDrive_2026-03-13.zip",
+      "path": "C:\\Users\\Tarun yadav\\Downloads\\vansh\\vansh\\OneDrive_2026-03-13.zip",
+      "risk_level": "medium",
+      "risk_score": 40,
+      "reasons": [
+        "archive_or_shortcut"
+      ]
+    }
+  ]
+}
